@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout trang admin</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="lib/angular.js"></script>
+    <style>
+        .product {
+            overflow: hidden;
+            position: relative;
+        }
+    
+        .product img {
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .product:hover img {
+            transform: scale(1.1);
+        }
+    
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    
+        .product:hover .overlay {
+            opacity: 1;
+        }
+      </style>
+</head>
+
+<body>
+    <!-- khu vực header -->
+    <!-- <nav class="navbar navbar-expand-sm shadow">
+    <div class="container">
+        <a href="trangchu.html" class="me-5"><img src="img/Screenshot 2024-01-14 133044.png" alt="" width="110px"></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">danh mục 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">danh mục 3</a>
+                </li>
+            </ul>
+            <form class="d-flex ">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Chitietgiohang.html"><i class="fa-solid fa-cart-shopping fa-xl"></i> <span id="cart-count">0</span></a>
+                    </li>
+                </ul>
+                <a href="Dangky.html"> <button class="btn btn-light me-3" type="button"> Đăng ký</button></a>
+                <a href="DangNhap.html"><button class="btn btn-primary rounded-pill" type="button">Đăng
+                        nhập</button></a>
+            </form>
+        </div>
+    </div>
+</nav> -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-white mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="trangchu.html"><img src="img/Screenshot 2024-01-14 133044.png" alt="" width="110px"></a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style=" color:#000;"href="#" role="button" data-bs-toggle="dropdown">Sản Phẩm </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="QuanAo.html">Quần áo</a></li>
+                          <li><a class="dropdown-item" href="#">Another link</a></li>
+                          <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" color:#000;" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" color:#000;" href="javascript:void(0)">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex">  
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Chitietgiohang.html"><i class="fa-solid fa-cart-shopping fa-xl"
+                                    style="color: #1f1f1f;"></i><span id="cart-count">0</span></a>
+                        </li>
+                    </ul>                                
+                    <a href="Dangky.html"> <button class="btn btn-light me-3" type="button"> Đăng ký</button></a>
+                    <a href="DangNhap.html"><button class="btn btn-primary " type="button">Đăng
+                            nhập</button></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 2. Thiếu kế phần còn lại (menu và nội dung chính) -->
+    <!-- B1: Khai báo vài thẻ div cần thiết -->
+    <!-- B2: Chia width cho từng khu vực -->
+    <!-- Khu vực menu: width 250px -->
+    <!-- Khu vực ND chính: width là toàn bộ width còn lại -->
+    <!-- B3: Thêm class .d-flex và thẻ cha để 2 div con lên cùng 1 hàng -->
+
+    <!-- B4: Copy nav vừa thiết kế vào thay thế cho text // Khu vực menu -->
+    <!-- B5: Sửa lại style cho menu 1 chút để đẹp -->
+    <!-- 5.1: Sửa bg thành bg-light cho nhẹ nhàng. xoá bg nội dung chính -->
+    <!-- 5.2: Thêm 1 chút padding cho nav -->
+    <!-- 5.3: config chiều cao cho menu | min-height: calc(100vh - 56px); -->
+
+    <div class="d-flex">
+        <!-- Khu vực menu -->
+       
+
+        <!-- Khu vực nội dung chính -->
+        <div class="container mt-3" style="width: calc(100% - 250px);">
+            <div class="container">
+                <!-- Khu vực tiêu đề trang -->
+                <h3>Tạo mới sản phẩm</h3>
+
+                <!-- Khu vực nội dung trang -->
+                <form>
+                    <!-- Lưu ý: Hãy nhớ 2 class sau: .form-label .form-control -->
+                    <!-- Khu vực input ID -->
+                    <div>
+                        <label class="form-label">ID:</label>
+                        <input class="form-control" type="text" placeholder="Nhập ID">
+                    </div>
+
+                    <!-- Khu vực input Tên sản phẩm -->
+
+                    <!-- Khu vực input Giá bán -->
+                    <div class="mt-3">
+                        <label class="form-label">Giá bán:</label>
+                        <input class="form-control" type="number" placeholder="Nhập giá bán">
+                    </div>
+
+                    <!-- Khu vực input Miêu tả -->
+                    <div class="mt-3">
+                        <label class="form-label">Miêu tả:</label>
+                        <textarea class="form-control" placeholder="Nhập miêu tả"></textarea>
+                    </div>
+
+                    <!-- Khu vực select Danh mục -->
+                    <div class="mt-3">
+                        <label class="form-label">Danh mục:</label>
+                        <select class="form-control">
+                            <option value="">- Lựa chọn -</option>
+                            <option value="value01">Danh mục 01</option>
+                            <option value="value02">Danh mục 02</option>
+                        </select>
+                    </div>
+
+                    <!-- ... -->
+
+                    <!-- Khu vực button -->
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="btn btn-success">Tạo Mới</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

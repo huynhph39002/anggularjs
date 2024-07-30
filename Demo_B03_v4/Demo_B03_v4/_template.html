@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB207_TaiNguyen_thuvien</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <!-- <script src="lib/font-fontawesome-ae333ffef2.js"></script> -->
+
+    <!-- Nhúng AngularJS -->
+    <!-- <script src="lib/angular.js"></script> -->
+    <!-- <script src="lib/angular-route.js"></script> -->
+    
+</head>
+<body>
+    
+            <div class="container mt-5">
+                <h2>Quản Lý Đơn Hàng</h2>
+            
+                <!-- Danh sách đơn hàng -->
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Người Mua</th>
+                        <th scope="col">Tổng Tiền</th>
+                        <th scope="col">Hành Động</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Đơn hàng 1 -->
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Người Mua 1</td>
+                        <td>$100</td>
+                        <td>
+                            <!-- Nút Chi Tiết -->
+                           <a href="ct.html"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#orderDetailModal">Chi Tiết</button></a> 
+                        </td>
+                    </tr>
+            
+                    <!-- Thêm các đơn hàng khác tương tự -->
+            
+                    </tbody>
+                </table>
+            
+                <!-- Modal Chi Tiết Đơn Hàng -->
+                <div class="modal fade" id="orderDetailModal" tabindex="-1" role="dialog" aria-labelledby="orderDetailModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="orderDetailModalLabel">Chi Tiết Đơn Hàng</h5>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Nội dung chi tiết đơn hàng -->
+                                <p>Người Mua: Người Mua 1</p>
+                                <p>Tổng Tiền: $100</p>
+                                <!-- Thêm thông tin chi tiết đơn hàng khác -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

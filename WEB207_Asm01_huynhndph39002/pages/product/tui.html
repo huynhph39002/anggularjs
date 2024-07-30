@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="text-center mt-4">
+        <h4>Túi </h4>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+        <div class="col-3 mb-3" ng-repeat="item in tuiProduct">
+            <!-- khu vực ảnh -->
+            <div class="border rounded overflow-hidden ">
+
+               <a href="ct1.html"> 
+                <div class="bg-light d-flex justify-content-center align-items-center product">
+                <img src="{{item.anh}}" alt="" width="304px" class="mw-100 mh-100"> 
+                <!-- <img src="img/chitiet2.webp" alt="" class="mw-100 mh-100 overlay"> -->
+            </div></a>
+                <!-- khu vực text và button -->
+                <div class="text-center m-3">
+                    <!-- ten sản phẩm  -->
+                    <span>{{item.ten}}</span>
+                    <!-- giá bán -->
+                    <div>
+                        <span class="fw-bold">{{item.gia}}</span>
+                        <!-- giá niêm yết -->
+                        <!-- <span class="fw-bold text-decoration-line-through"> giá niêm yết</span> -->
+                    </div>
+                   
+
+                    <!-- button mua ngay -->
+                    
+                   <a href="Xacnhandonhang.html"><button class="btn btn-danger rounded-pill w-100 btn-sm  mt-3">mua ngay</button></a> 
+                </div>
+            </div>
+        </div>
+       
+
+        
+    </div>
+    
+</div>
+    
+
+</div>
+<style>
+    .product {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .product img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .product:hover img {
+        transform: scale(1.1);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .product:hover .overlay {
+        opacity: 1;
+    }
+    .product .buy-now{
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        /* background-color: rgb(10, 11, 11); */
+        /* color: #fff; */
+        padding: 10px 0px;
+        bottom: -395px;
+        position: absolute;
+        width: 100%;
+        transition: 0,25s ease-in-out;
+        /* opacity: 0.85; */
+    }
+    .product:hover a.buy-now{
+        bottom: 0px;
+    }
+  </style>

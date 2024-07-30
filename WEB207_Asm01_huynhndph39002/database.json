@@ -1,0 +1,299 @@
+{
+  "danhmuc": [
+    {
+      "id": 1,
+      "ten": "Quần Áo"
+    },
+    {
+      "id": 2,
+      "ten": "Túi Sách"
+    },
+    {
+      "id": 3,
+      "ten": "Giày"
+    }
+    
+  ],
+  "tui": [
+    {
+      "id": "2",
+      "ten": "Túi Xách Nhỏ Dập Phồng Phối Khoá",
+      "anh": "img/t1.webp",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    },
+    {
+      "id": "2",
+      "ten": "Balo Nhỏ Đính Hoa 3D",
+      "anh": "img/t2.webp",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    },
+    {
+      "id": "2",
+      "ten": "Túi Xách Trung Tote Dập Hoạ Tiết ",
+      "anh": "img/t3.webp",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    },
+    {
+      "id": "2",
+      "ten": "Túi Xách Nhỏ Top Handle Put",
+      "anh": "img/t4.webp",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    },
+    {
+      "id": "2",
+      "ten": "Túi Xách Nhỏ Đeo Vai Dây",
+      "anh": "img/t5.jpeg",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    },
+    {
+      "id": "2",
+      "ten": "Túi Xách Trung Phối Khăn Lụa",
+      "anh": "img/t6.jpeg",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    },
+    {
+      "id": "2",
+      "ten": "Túi Xách Nhỏ Tay Cầm Phối Khăn",
+      "anh": "img/t7.webp",
+      "gia": "588.000đ",
+      "idDanhMuc": "Túi Sách"
+    }
+  ],
+  "quanao": [
+    {
+      "id": 1,
+      "ten": "Đầm Midi Thun Dệt Kim Xoắn",
+      "anh": "img/qa1.jpeg",
+      "gia": "588.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 2,
+      "ten": "Đầm Sơ Mi Không Tay Tùng Xếp Ly",
+      "anh": "img/qa2.webp",
+      "gia": "508.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 3,
+      "ten": "Chân Váy Midi Xếp Liy",
+      "anh": "img/qa3.webp",
+      "gia": "608.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 4,
+      "ten": "Áo Baby Tee Đính Đá",
+      "anh": "img/qa4.webp",
+      "gia": "508.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 5,
+      "ten": "Áo polo Dệt kim Sọc Ngang",
+      "anh": "img/qa6.webp",
+      "gia": "608.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 6,
+      "ten": "Đầm Thun Midi Xoắn Lưng",
+      "anh": "img/qa7.webp",
+      "gia": "608.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    }
+  ],
+  "allsanpham": [
+    {
+      "id": 1,
+      "ten": "Đầm Midi _thang 2",
+      "anh": "img/qa1.jpeg",
+      "gia": "588.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 2,
+      "ten": "Đầm Sơ Mi Không Tay Tùng Xếp Ly",
+      "anh": "img/qa2.webp",
+      "gia": "508.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 3,
+      "ten": "Chân Váy Midi Xếp Liy",
+      "anh": "img/qa3.webp",
+      "gia": "608.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 4,
+      "ten": "Áo Baby Tee Đính Đá",
+      "anh": "img/qa4.webp",
+      "gia": "508.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 5,
+      "ten": "Áo polo Dệt kim Sọc Ngang",
+      "anh": "img/qa6.webp",
+      "gia": "608.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 6,
+      "ten": "Đầm Thun Midi Xoắn Lưng",
+      "anh": "img/qa7.webp",
+      "gia": "608.000đ",
+      "danhmuc": "Quần Áo",
+      "idDanhMuc": 1
+    },
+    {
+      "id": 7,
+      "ten": "Túi Xách Nhỏ Dập Phồng Phối Khoá",
+      "anh": "img/t1.webp",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 8,
+      "ten": "Balo Nhỏ Đính Hoa 3D",
+      "anh": "img/t2.webp",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 9,
+      "ten": "Túi Xách Trung Tote Dập Hoạ Tiết ",
+      "anh": "img/t3.webp",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 10,
+      "ten": "Túi Xách Nhỏ Top Handle Put",
+      "anh": "img/t4.webp",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 11,
+      "ten": "Túi Xách Nhỏ Đeo Vai Dây",
+      "anh": "img/t5.jpeg",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 12,
+      "ten": "Túi Xách Trung Phối Khăn Lụa",
+      "anh": "img/t6.jpeg",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 13,
+      "ten": "Túi Xách Nhỏ Tay Cầm Phối Khăn",
+      "anh": "img/t7.webp",
+      "gia": "588.000đ",
+      "danhmuc": "Túi Sách",
+      "idDanhMuc": 2
+    },
+    {
+      "id": 14,
+      "ten": "Sneaker String",
+      "anh": "img/g1.webp",
+      "gia": "588.000đ",
+      "danhmuc": "Giày",
+      "idDanhMuc": 3
+    }
+  ],
+  "sanphamnoibat": [
+    {
+      "ten": "Túi Xách Nhỏ Marina",
+      "anh": "img/túi1.webp",
+      "gia": "1,010,000 VNĐ"
+    },
+    {
+      "ten": "Túi Xách Nhỏ Clutch Oceania",
+      "anh": "img/túi2.jpg",
+      "gia": "1,010,000 VNĐ"
+    },
+    {
+      "ten": "Túi Xách Nhỏ Lslaa",
+      "anh": "img/túi3.webp",
+      "gia": "1,010,000 VNĐ"
+    },
+    {
+      "ten": "Túi Xách Nhỏ Cong Snowflak",
+      "anh": "img/túi4.webp",
+      "gia": "1,010,000 VNĐ"
+    }
+  ],
+  "banner": [
+    {
+      "anh": "img/kv_hoa_ldp_ngang_afaa03b03c42476eb2fe1177bf2dcc37.webp"
+    },
+    {
+      "anh": "img/1920x870_ja_b6b126f4536c4a0bb7438854e6e71544.webp"
+    }
+  ],
+  "quantam": [
+    {
+      "ten": "GIÀY SANDAL",
+      "anh": "img/QT!.webp"
+    },
+    {
+      "ten": "TÚI XÁCH NHỎ",
+      "anh": "img/QT2.jpg"
+    },
+    {
+      "ten": "QUẦN ÁO THỜI TRANG",
+      "anh": "img/QT3.webp"
+    }
+  ],
+  "users": [
+    {
+      "Ho": "Nguyễn",
+      "Ten": "Huỳnh",
+      "Email": "huynhndph39002@fpt.edu.vn",
+      "Matkhau": "123456789",
+      "id": 1
+    },
+    {
+      "Ho": "ng",
+      "Ten": "h",
+      "Email": "huynhndph39002@fpt.edu.vn",
+      "Matkhau": "000000000",
+      "id": 2
+    },
+    {
+      "Ho": "nguyễn",
+      "Ten": "huỳnh",
+      "Email": "huynhndph39002@fpt.edu.vn",
+      "Matkhau": "1234567890",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "id": "01",
+      "hoten": "adasd",
+      "namsinh": "2004",
+      "chuyennganh": "Phat trien phan mem"
+    },
+    {
+      "id": "sp02",
+      "hoten": "huyhh",
+      "namsinh": "2004",
+      "chuyennganh": "Ung dung phan mem"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "id": "SP01",
+      "name": "Sản phẩm 01",
+      "price": "200000550",
+      "category": "Đồ Nhà Tắm TC"
+    },
+    {
+      "id": "SP02",
+      "name": "Sản phẩm 02",
+      "price": "2000000",
+      "category": "Đồ Nhà Tắm TC"
+    }
+  ]
+}

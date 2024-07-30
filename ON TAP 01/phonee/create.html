@@ -1,0 +1,32 @@
+<h3> Trang tao moi</h3>
+<form action="">
+    <!-- id -->
+    <div class="mt-3">
+        <span class="form-label">ID:</span>
+        <input type="text" ng-model="phone.id" class="form-control">
+    </div>
+    <!-- ten -->
+    <div class="mt-3">
+        <span class="form-label">ten:</span>
+        <input type="text" ng-model="phone.ten" class="form-control">
+    </div>
+    <!-- hang -->
+    <div class="mt-3">
+        <span class="form-label">hang:</span>
+       <select ng-model="phone.hang" class="form-control">
+        <option value="" disabled>--lua chon--</option>
+        <option value="IPHONE" >IPHONE</option>
+        <option value="SAM SUNG" >SAM SUNG</option>
+        <option value="OPPO" >OPPO</option>
+       </select>
+    </div>
+    <!-- gia -->
+    <div class="mt-3">
+        <span class="form-label">gia:</span>
+        <input type="text" ng-model="phone.gia" class="form-control">
+    </div>
+    <div class="mt-3">
+        <button ng-click="onclickCreate()" class="btn btn-success">tao moi</button>
+        <a href="#!danh-sach" class="btn btn-secondary">quay lai</a>
+    </div>
+</form>

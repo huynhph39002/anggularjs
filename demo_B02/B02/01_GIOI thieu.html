@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <h3># gioi thieu font-icon </h3>
+            <div>
+                <h6>font-icon co ban</h6>
+            </div>
+            <!-- 1. nhúng thư viện font-icon -->
+            <!-- 2. truy cập trang tài liệu để tìm icon và sử sụng  -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass-dollar"></i>
+        </div>
+
+        <div>
+            <h6> kích thước icon </h6>
+            <i class="fa-solid fa-magnifying-glass-dollar fa-sm"></i>
+            <i class="fa-solid fa-magnifying-glass-dollar fa-md"></i>
+            <i class="fa-solid fa-magnifying-glass-dollar"></i>
+            <i class="fa-solid fa-magnifying-glass-dollar fa-lg"></i>
+            <i class="fa-solid fa-magnifying-glass-dollar fa-xl"></i>
+            <i class="fa-solid fa-magnifying-glass-dollar fa-2xl"></i>
+        </div>
+
+        <h3>Giới thiệu badge </h3>
+        <div>
+            <h3>Badge cơ bản </h3>
+            <div>
+                <span class="badge bg-danger "> hết hàng </span>
+                <span class="badge bg-success "> còn hàng </span>
+            </div>
+
+            <h3>Badge bo tròn góc </h3>
+            <div>
+                <span class="badge bg-danger rounded-pill"> hết hàng </span>
+                <span class="badge bg-success rounded-pill"> còn hàng </span>
+            </div>
+            <h6> kết hợp với componet khác </h6>
+            <div>
+                <button class="btn btn-primary">
+                    thông báo
+                    <span class="badge bg-danger rounded-pill">99</span>
+                </button>
+            </div>
+
+            <div>
+                <h6> làm icon giỏ hàng có bộ đếm</h6>
+                <button class="btn  position-relative pt-3 pe4">
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                    <span class="badge bg-danger rounded-pill position-absolute top-0 end-0">99</span>
+                </button>
+                <!-- sử dụng kỹ thuật css để di chuyển bộ đếm đến vị trí mong muốn  -->
+                <!-- Sử dụng position-relative và position-absolute  -->
+            </div>
+        </div>
+
+        <hr>
+        <h3> Giới thiệu modal(popup)</h3>
+        <div>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalxacnhanxoa">
+                Xóa
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="modalxacnhanxoa">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Xác nhận xóa</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            Bạn có chắc chắn muốn xóa không?
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">hủy</button>
+                            <button class="btn btn-danger">xác nhận xóa</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<hr>
+<h6> giới thiệu table</h6>
+<div>
+    <H5> table cơ bản</H5>
+    <br>
+    <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<br>
+
+<h3> # giới thiệu về d-flex</h3>
+<div>
+    <h6> khai báo 3 box cần thiết</h6>
+    <div class="bg-secondary">
+        <div class="bg-danger"> 
+            <div>Box 1.1</div>
+        </div>
+
+        <div class="bg-success"> 
+            <div>Box 2.1</div>
+            <div>Box 2.2</div>
+        
+        </div>
+        <div class="bg-warning"> 
+            <div>Box 3.1</div>
+            <div>Box 3.2</div>
+            <div>Box 3.3</div>
+        </div>
+    </div>
+
+
+    
+    <h6> sử dụng d-flex</h6>
+    <div class="bg-secondary d-flex">
+        <div class="bg-danger"> 
+            <div>Box 1.1</div>
+        </div>
+
+        <div class="bg-success"> 
+            <div>Box 2.1</div>
+            <div>Box 2.2</div>
+        
+        </div>
+        <div class="bg-warning"> 
+            <div>Box 3.1</div>
+            <div>Box 3.2</div>
+            <div>Box 3.3</div>
+        </div>
+    </div>
+    <br>
+
+    <h6> sử dụng d-flex</h6>
+    <div class="bg-secondary d-flex justify-content-between">
+        <div class="bg-danger"> 
+            <div>Box 1.1</div>
+        </div>
+
+        <div class="bg-success"> 
+            <div>Box 2.1</div>
+            <div>Box 2.2</div>
+        
+        </div>
+        <div class="bg-warning"> 
+            <div>Box 3.1</div>
+            <div>Box 3.2</div>
+            <div>Box 3.3</div>
+        </div>
+    </div>
+    <br>
+
+    <h6> sử dụng d-flex</h6>
+    <div class="bg-secondary d-flex align-items-center">
+        <div class="bg-danger"> 
+            <div>Box 1.1</div>
+        </div>
+
+        <div class="bg-success"> 
+            <div>Box 2.1</div>
+            <div>Box 2.2</div>
+        
+        </div>
+        <div class="bg-warning"> 
+            <div>Box 3.1</div>
+            <div>Box 3.2</div>
+            <div>Box 3.3</div>
+        </div>
+    </div>
+
+</div>
+<br><br>
+
+
+
+
+
+    </div>
+
+
+    <div class="container">
+
+        <h3>Danh sach quan ly san pham</h3>
+        <br>
+        <div class="d-flex justify-content-end">
+            <button class="badge bg-success rounded-pill">Tao moi san pham</button>
+        </div>
+        
+        <div>
+            <table class="table table-bordered mt-2">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Anh</th>
+                    <th>Ten san pham</th>
+                    <th>Danh muc</th>
+                    <th>Trang thai</th>
+                    <th>Tuong tac</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SP001</td>
+                    <td>
+                        <div class="boder rounded bg-light overflow-hidden d-flex justify-content-center align-items-center"
+                         style="width:100px; height: 100px;" >
+                            <img src="img/san-pham_ao-len-01.jpeg"class="mw-100 mh-100">
+                        </div>
+                        
+                    </td>
+                    <td>San pham 001</td>
+                    <td>4</td>
+                    <td><span  class="badge bg-success rounded-pill">Con hang</span></td>
+                    <td style="width: 1px; " class="text-nowrap">
+                        <button class="btn btn-primary btn-sm">xem</button>
+                        <button class="btn btn-warning btn-sm">sua</button>
+                        <button class="btn btn-danger btn-sm">xoa</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>SP002</td>
+                    <td>
+                        <div class="boder rounded bg-light overflow-hidden d-flex justify-content-center align-items-center"
+                         style="width:100px; height: 100px;" >
+                            <img src="img/logo_bootstrap.webp"class="mw-100 mh-100">
+                        </div>
+                    </td>
+                    <td>San pham 002</td>
+                    <td>4</td>
+                    <td  ><span class="badge bg-danger rounded-pill">Het hang</span></td>
+                    <td style="width: 1px; " class="text-nowrap">
+                        <button class="btn btn-primary btn-sm">xem</button>
+                        <button class="btn btn-warning btn-sm">sua</button>
+                        <button class="btn btn-danger btn-sm">xoa</button>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

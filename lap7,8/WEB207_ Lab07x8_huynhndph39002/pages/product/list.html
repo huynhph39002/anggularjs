@@ -1,0 +1,23 @@
+<h2>trang danh sach</h2>
+<div class="d-flex justify-content-end">
+    <a href="#!tao-moi-sinh-vien"><button class="btn btn-success">tao moi</button></a>
+</div>
+<table class="table table-bordered mt-2">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>hoten</th>
+            <th>namsinh</th>
+            <th>chuyennganh</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="item in listProduct">
+        <td>{{item.id}}</td>
+        <td>{{item.hoten}}</td>
+        <td>{{item.ngaysinh}}</td>
+        <td style="width: 1px;" class="text-nowrap">
+            <a href="#!chi-tiet-sinh-vien/{{item.id}}" class="btn btn-primary btn-sm">Xem</a>
+            <a href="" class="btn btn-danger btn-sm">xoa</a>
+        </td>
+    </tbody>
+</table>

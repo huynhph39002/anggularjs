@@ -1,0 +1,99 @@
+
+    <div class="container col-sm-6">
+        <form class="mt-5">
+            <h3 class="">Đăng Ký</h3>
+            <div class="mb-3 mt-3">
+                <label for="firstName" class="form-label">Họ:</label>
+                <input ng-model="users.Ho" type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Tên:</label>
+                <input ng-model="users.Ten" type="text" class="form-control" id="lastName" name="lastName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input ng-model="users.Email" type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu:</label>
+                <input ng-model="users.Matkhau" type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-dark" ng-click="onClickDangky()">Đăng Ký</button>
+           <a href="#!login-product"><button type="submit" class="btn btn-dark" >Quay lại</button></a> 
+        
+            <div class="alert alert-danger mt-1" ng-hide="formStatus">
+                {{formMessage}}
+            </div> 
+        
+            
+        </form>
+        
+        
+    </div>
+    
+    
+
+
+
+
+
+<!-- 
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Đăng Ký</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Họ và Tên</label>
+                    <input type="text" class="form-control" id="fullName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                <a href="index.html"><button type="button" class="btn btn-secondary" onclick="goBack()">Quay Lại</button></a>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="row container-fluid d-flex">
+    <div class="col-sm-6">
+        <form class="mt-5">
+            <h3 class="">Đăng Ký</h3>
+            <div class="mb-3 mt-3">
+                <label for="firstName" class="form-label">Họ:</label>
+                <input ng-model="users.Ho" type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Tên:</label>
+                <input ng-model="users.Ten" type="text" class="form-control" id="lastName" name="lastName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input ng-model="users.Email" type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu:</label>
+                <input ng-model="users.Matkhau" type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-dark" ng-click="onClickDangky()">Đăng Ký</button>
+        
+            <div class="alert alert-danger mt-1" ng-hide="formStatus">
+                {{formMessage}}
+            </div> 
+        
+            
+        </form>
+        
+        
+    </div> -->

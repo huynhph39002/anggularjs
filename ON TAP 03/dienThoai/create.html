@@ -1,0 +1,33 @@
+<h3>tao moi</h3>
+
+<form action="">
+    <div class="mt-3">
+        <span class="form-label">id:</span>
+        <input type="text" name="" id="" class="form-control" ng-model="DT.id">
+    </div>
+    <div class="mt-3">
+        <span class="form-label">ten:</span>
+        <input type="text" name="" id="" class="form-control" ng-model="DT.ten">
+    </div>
+    <div class="mt-3">
+        <span class="form-label">hang:</span>
+       <select name="" id="" ng-model="DT.hang" class="form-control">
+        <option value="">--lua chon--</option>
+        <option value="oop">oop</option>
+        <option value="ip">ip</option>
+        
+       </select>
+    </div>
+    <div class="mt-3">
+        <span class="form-label">gia:</span>
+        <input type="text" name="" id="" class="form-control" ng-model="DT.gia">
+    </div>
+    <div class="mt-3">
+        <button ng-click="createCL()" class="btn btn-success">tao moi</button>
+        <a href="#!list" class="btn btn-secondary">quay lai</a>
+    </div>
+
+    <div class="alert alert-danger  mt-2" ng-hide="formST">
+        {{formMess}}
+    </div>
+</form>

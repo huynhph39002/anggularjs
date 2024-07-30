@@ -1,0 +1,44 @@
+{
+  "product": [
+    {
+      "id": "02",
+      "img":"img/túi2.jpg",
+      "name": "ko ten",
+      "price": "1233456",
+      "category": "Do Bep"
+    },
+    {
+      "id": "03",
+      "name": "aaaaa",
+      "price": "1111111111111",
+      "category": "Binh Hoa"
+    },
+    {
+      "id": "01",
+      "name": "fffff",
+      "price": "222999999999",
+      "category": "Binh Hoa"
+    }
+    ,
+    {
+      "id": "01",
+      "name": "fffff",
+      "price": "222999999999",
+      "category": "Binh Hoa"
+    }
+    ,
+    {
+      "id": "01",
+      "name": "fffff",
+      "price": "222999999999",
+      "category": "Binh Hoa"
+    }
+    ,
+    {
+      "id": "01",
+      "name": "fffff",
+      "price": "222999999999",
+      "category": "Binh Hoa"
+    }
+  ]
+}

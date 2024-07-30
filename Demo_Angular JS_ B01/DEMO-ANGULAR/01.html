@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <!-- Nhúng Angular js -->
+    <script src="lib/angular.js"></script>
+
+    <script>
+        //2.2 khởi tạo ng-app
+        var app= angular.module('myApp', []);
+        //3.2 khởi tọa ng-controller
+        app.controller('nameCtrl',function(){
+            //khu vực viết code logic của nameCtrl
+            console.log('hiiiiiiiiiiiiiiiiiiii');
+        })
+    </script>
+
+</head>
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <h3>Khởi tạo ứng dụng AngularJS</h3>
+        <p>1.Nhúng thư viện </p>
+
+        <p>2.KHỏi tạo ng-app</p>
+        <p>2.1 khởi tạo tại code html</p>
+        <p>2.2 khởi tạo tại code js</p>
+
+        <p>3 Khởi tọa ng-controller</p>
+        <p>3.1 khởi tạo tại code html</p>
+
+        <div ng-controller="nameCtrl">
+            <h1> xin chao</h1>
+        <!-- Lưu ý tất cả code html của nameCtrl  -->
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<h3>trang danh sach</h3>
+<!-- khu vuc tieu de trang -->
+<!-- khu vuc button -->
+<div class="d-flex justify-content-end">
+    <a href="#!create-product"><button class="btn btn-success">Tao moi</button></a>
+</div>
+<!-- khu vuc bang -->
+<table class="table table-bordered mt-2">
+    <thead>
+        <tr >
+            <th>ID</t>
+            <th>Tên sản phẩm</th>
+            <th>Gia </th>
+            <th>Tương tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in listProduct">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td style="width: 1px;" class="text-nowrap">
+                <a href="#!detail-product/{{item.id}}" class="btn btn-primary btn-sm">Xem</a>
+                <a href="#!edit-product/{{item.id}}" class="btn btn-warning btn-sm">Sửa</a>
+                <!-- <a href="" class="btn btn-danger btn-sm" ng-click="onClickDelete(item.id)">Xoá</a> -->
+                <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#myModal-{{item.id}}">
+    Xoá
+  </button>
+  <!-- The Modal -->
+  <div class="modal" id="myModal-{{item.id}}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Xác nhận xóa</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+        bạn chắc chắn muốn xóa {{item.name}} không 
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">hủy</button>
+          <a href="" class="btn btn-danger btn-sm" ng-click="onClickDelete(item.id)"> xác nhận Xoá</a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

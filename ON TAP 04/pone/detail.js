@@ -1,0 +1,14 @@
+app.controller('detailCtrl',function($http,$scope,$routeParams){
+    $scope.phone={
+        id:'',
+        ten:'',
+        hang:'',
+        gia:''
+    }
+    $http({
+        method:'GET',
+        url:'http://localhost:3000/phone/'+$routeParams.id
+    }).then(function(response){
+        $scope.phone=response.data
+    })
+})

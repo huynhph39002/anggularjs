@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout trang admin</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+
+    
+
+    <style>
+        .product {
+            overflow: hidden;
+            position: relative;
+        }
+    
+        .product img {
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .product:hover img {
+            transform: scale(1.1);
+        }
+    
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    
+        .product:hover .overlay {
+            opacity: 1;
+        }
+        .product .buy-now{
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            /* background-color: rgb(10, 11, 11); */
+            /* color: #fff; */
+            padding: 10px 0px;
+            bottom: -395px;
+            position: absolute;
+            width: 100%;
+            transition: 0,25s ease-in-out;
+            /* opacity: 0.85; */
+        }
+        .product:hover a.buy-now{
+            bottom: 0px;
+        }
+      </style>
+      <script>
+        // 2.3. Khởi tạo ng-app
+        var app = angular.module('myApp', ['ngRoute']);
+
+        // 4. Khai báo $routeProvider
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/list-product", {
+                    templateUrl: "pages/product/list.html",
+                    controller: "listProductCtrl"
+                })
+                .when("/create-product", {
+                    templateUrl: "pages/product/create.html",
+                    controller: "createProductCtrl"
+                })
+                .when("/detail-product/:id", {
+                    templateUrl: "pages/product/detail.html",
+                    controller: "detailProductCtrl"
+                })
+               .when("/edit-product/:id", {
+                    templateUrl: "pages/product/edit.html",
+                    controller: "editProductCtrl"
+                })
+                .when("/SPnoibat-product", {
+                    templateUrl: "pages/product/SPnoibat.html",
+                    controller: "SPnoibatProductCtrl"
+                })
+        })
+
+    </script>
+
+
+    <!-- Nhúng các file js khai báo controller -->
+    <!-- Lưu ý: Nhúng sau khu vực khởi tạo ng-app -->
+    <script src="pages/product/list.js"></script>
+    <script src="pages/product/detail.js"></script>
+    <script src="pages/product/create.js"></script>
+    <script src="pages/product/edit.js"></script>
+    <script src="pages/product/SPnoibat.js"></script>
+
+
+</head>
+
+<body ng-app="myApp">
+    <!-- khu vực header -->
+    <!-- <nav class="navbar navbar-expand-sm shadow">
+    <div class="container">
+        <a href="trangchu.html" class="me-5"><img src="img/Screenshot 2024-01-14 133044.png" alt="" width="110px"></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">danh mục 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">danh mục 3</a>
+                </li>
+            </ul>
+            <form class="d-flex ">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Chitietgiohang.html"><i class="fa-solid fa-cart-shopping fa-xl"></i> <span id="cart-count">0</span></a>
+                    </li>
+                </ul>
+                <a href="Dangky.html"> <button class="btn btn-light me-3" type="button"> Đăng ký</button></a>
+                <a href="DangNhap.html"><button class="btn btn-primary rounded-pill" type="button">Đăng
+                        nhập</button></a>
+            </form>
+        </div>
+    </div>
+</nav> -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-white mt-3" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="trangchu.html" ><img src="img/Screenshot 2024-01-14 133044.png" alt="" width="110px"></a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style=" color:#000;"href="#" role="button" data-bs-toggle="dropdown">Sản Phẩm </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="QuanAo.html">Quần áo</a></li>
+                          <li><a class="dropdown-item" href="#">Another link</a></li>
+                          <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" color:#000;" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" color:#000;" href="javascript:void(0)">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex">     
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Chitietgiohang.html"><i class="fa-solid fa-cart-shopping fa-xl"
+                                    style="color: #1f1f1f;"></i><span id="cart-count"></span></a>
+                        </li>
+                    </ul>         
+                    <a href="Dangky.html"> <button class="btn btn-light me-3" type="button"> Đăng ký</button></a>
+                    <a href="DangNhap.html"><button class="btn btn-primary " type="button">Đăng
+                            nhập</button></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 2. Thiếu kế phần còn lại (menu và nội dung chính) -->
+    <!-- B1: Khai báo vài thẻ div cần thiết -->
+    <!-- B2: Chia width cho từng khu vực -->
+    <!-- Khu vực menu: width 250px -->
+    <!-- Khu vực ND chính: width là toàn bộ width còn lại -->
+    <!-- B3: Thêm class .d-flex và thẻ cha để 2 div con lên cùng 1 hàng -->
+
+    <!-- B4: Copy nav vừa thiết kế vào thay thế cho text // Khu vực menu -->
+    <!-- B5: Sửa lại style cho menu 1 chút để đẹp -->
+    <!-- 5.1: Sửa bg thành bg-light cho nhẹ nhàng. xoá bg nội dung chính -->
+    <!-- 5.2: Thêm 1 chút padding cho nav -->
+    <!-- 5.3: config chiều cao cho menu | min-height: calc(100vh - 56px); -->
+
+    <!-- <div class="d-flex"> -->
+    <!-- Khu vực menu -->
+    <!-- <div class="bg-light p-2 " style="width: 250px; min-height: calc(100vh - 56px);">
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="QuanlySP.html">Danh sách sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="taomoiSP.html">Tạo mới sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="QuanlydanhmucSP.html">Danh sách danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tạo mới danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Quanlydonhang.html">Danh sách đơn hàng</a>
+                </li>
+            </ul>
+        </div> -->
+
+    <!-- Khu vực nội dung chính -->
+    <div class=" container ">
+
+
+        <div id="demo" class="carousel slide overflow-hidden " data-bs-ride="carousel" style="height:400px;">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators ">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+
+
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/kv_hoa_ldp_ngang_afaa03b03c42476eb2fe1177bf2dcc37.webp" alt="" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/1920x870_ja_b6b126f4536c4a0bb7438854e6e71544.webp" alt="" class="d-block w-100">
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- khu vực sản phẩm mới -->
+        <div class="text-center mt-4">
+            <h4>SẢN PHẨM MỚI</h4>
+            <span> Các sản phẩm bắt nhịp quốc tế, nàng thời thượng không nên bỏ lỡ</span>
+        </div>
+        <div class="row mt-3">
+            <div class="col-3 mb-3" ng-repeat="item in  sanphamnoibat">
+                <!-- khu vực ảnh -->
+                <div class="border  rounded overflow-hidden ">
+
+                  
+                    <div class="bg-light d-flex  justify-content-center align-items-center product">
+                     <a href="ct1.html"> <img src="{{item.anh}}" alt="" width="304px" class="mw-100 mh-100"> </a> 
+                        <!-- <a href="ct1.html" class="buy-now"><img src="img/chitiet2.webp" class="mw-100 mh-100"alt=""width="304px"></a> -->
+                    <!-- <img src="img/chitiet2.webp" alt="" class="mw-100 mh-100 overlay"> -->
+                </div>
+                    <!-- khu vực text và button -->
+                    <div class="text-center m-3">
+                        <!-- ten sản phẩm  -->
+                        <h5>{{item.ten}}</h5>
+                        <!-- giá bán -->
+                        <div>
+                            <span class="fw-bold">{{item.giaban}}</span>
+                            <!-- giá niêm yết -->
+                            <!-- <span class="fw-bold text-decoration-line-through"> giá niêm yết</span> -->
+                        </div>               
+                        <!-- button mua ngay -->                
+                       <a href="Xacnhandonhang.html"><button class="btn btn-danger rounded-pill w-100 btn-sm  mt-3">mua ngay</button></a> 
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+        </div>
+        <div class="text-center">
+           <a href=""><Span style=" text-decoration: underline; "></Span></a>
+        </div>
+
+        <div></div>
+        <hr>
+        <div>
+            <div class="text-center">
+                <h4>NHÓM SẢN PHẨM ĐƯỢC QUAN TÂM NHẤT</h4>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col " ng-repeat="item in sanphamquantam">
+                    <div class="border rounded overflow-hidden">
+                        <div class="bg-light d-flex justify-content-center align-items-center product">
+                            <img src="{{item.anh}}" alt="" width=""class="mw-100 mh-100">
+
+                        </div>
+                        <div class="text-center mt-">
+                            <p>{{item.ten}}</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+    
+    <!-- khu vực footer -->
+    <div class="bg-light border-top py-3">
+        <div class="container">
+            <span>CHÀO KHÁCH HÀNG</span>
+        </div>
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<h3> trang danh sach </h3>
+
+<div class="d-flex justify-content-end">
+    <a href="#!tao-moi" class="btn btn-success">TAO MOI</a>
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ten</th>
+                <th>hang</th>
+                <th>gia</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="item in danhSachSanPham">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.ten}}</td>
+                <td>{{item.hang}}</td>
+                <td>{{item.gia}}</td>
+                <td class="text-nowrap">
+                    <a href="#!chi-tiet/{{item.id}}" class="btn btn-primary">xem</a>
+                    <a href="#!chinh-sua/{{item.id}}" class="btn btn-warning">sua</a>
+                    <button ng-click="onXOA(item.id)" class="btn btn-danger">xoa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>

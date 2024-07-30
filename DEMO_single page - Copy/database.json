@@ -1,0 +1,37 @@
+{
+  "product": [
+    {
+      "id": "02",
+      "name": "ko ten",
+      "price": "1233456",
+      "category": "Do Bep",
+      "img": "https://upanh123.com/wp-content/uploads/2019/04/anh-anime-girl1.jpg"
+    },
+    {
+      "id": "03",
+      "img": "img/túi2.jpg",
+      "name": "aaaaa",
+      "price": "1111111111111",
+      "category": "Binh Hoa"
+    },
+    {
+      "id": "01",
+      "name": "fffff",
+      "price": "222999999999",
+      "category": "Binh Hoa"
+    },
+    {
+      "id": "09",
+      "name": "ttt",
+      "price": "22222222222",
+      "category": "Binh Hoa"
+    },
+    {
+      "id": "07",
+      "img": "img/túi1.webp",
+      "name": "ff",
+      "price": "111111111111111",
+      "category": "Binh Hoa"
+    }
+  ]
+}

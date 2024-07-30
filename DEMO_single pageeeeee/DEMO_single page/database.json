@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "id": "01",
+      "name": "ao",
+      "price": "123456789098765432",
+      "category": "Binh Hoa"
+    },
+    {
+      "id": "02",
+      "name": "ko ten",
+      "price": "1233456",
+      "category": "Do Bep"
+    }
+  ]
+}

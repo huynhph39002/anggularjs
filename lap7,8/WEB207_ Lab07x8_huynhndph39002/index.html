@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngRoute'])
+        //khai bao $routeProvider
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when('/danh-sach-sinh-vien', {
+                    templateUrl: 'pages/product/list.html',
+                    controller: "listProductCtrl"
+                })
+                .when('/tao-moi-sinh-vien', {
+                    templateUrl: 'pages/product/create.html',
+                    controller: "createProductCtrl"
+                })
+                .when('/chi-tiet-sinh-vien/:id', {
+                    templateUrl: 'pages/product/detail.html',
+                    controller: "detalProductCtrl"
+                })
+        })
+    </script>
+  
+    <script src="pages/product/list.js"></script>
+    <script src="pages/product/detail.js"></script>
+    <script src="pages/product/create.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container">
+            
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!danh-sach-sinh-vien">TRang danh sach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!tao-moi-sinh-vien">TRang tao moi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!chi-tiet-sinh-vien/sp01">TRang chi tiet</a>
+                    </li>
+                </ul>
+            
+    </nav>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+   
+</body>
+
+</html>

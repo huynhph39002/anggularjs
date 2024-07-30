@@ -1,0 +1,36 @@
+<!-- Khu vực tiêu đề trang -->
+<h3 class="text-center">Danh sach dien thoai</h3>
+
+<!-- khu vuc dieu huong -->
+
+<div class="text-end">
+    <a href="#!phone/add" class="btn btn-success">Them</a>
+</div>
+
+<!-- khu vuc bang du lieu -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ten</th>
+            <th>Hang</th>
+            <th>Gia</th>
+            <th>Thao tac</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in danhSachDienThoai">
+            <td>{{item.id}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.hang}}</td>
+            <td>{{item.gia}}</td>
+            <td>
+                <a href="#!detail/phone/{{item.id}}" class="btn btn-primary">chi tiet</a>
+                <a href="#!edit/phone/{{item.id}}" class="btn btn-warning">sua</a>
+                <button ng-click="onClickXoa(item.id)" class="btn btn-danger">xoa</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

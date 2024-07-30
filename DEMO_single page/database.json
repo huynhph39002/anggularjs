@@ -1,0 +1,22 @@
+{
+  "product": [
+    {
+      "id": "02",
+      "name": "ten gi",
+      "price": "1233456",
+      "category": "Do Bep"
+    },
+    {
+      "id": "03",
+      "name": "aaaaa",
+      "price": "1111111111111",
+      "category": "Binh Hoa"
+    },
+    {
+      "id": "04",
+      "name": "hhhh",
+      "price": "1000000000",
+      "category": "Binh Hoa"
+    }
+  ]
+}

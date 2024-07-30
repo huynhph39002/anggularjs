@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+<script>
+    var app=angular.module('myApp',[]);
+    app.controller("nameCtrl",function($scope,$http){
+        $scope.SanPham=[]
+
+        $http({
+            method:'GEt',
+            url:'http://localhost:3000/product'
+        }).then(function(response){
+            console.log('',response.data);
+            $scope.SanPham=response.data
+        })
+    })
+
+</script>
+</head>
+<body ng-app="myApp">
+    <div class="container" ng-controller="nameCtrl">
+        <table class="table table-bordered mt-2">
+            <thead>
+                <tr>
+                    <th>ID</t>
+                    <th>Tên sản phẩm</th>
+                    <th>Gia </th>
+                    <th>Tương tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in SanPham">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td style="width: 1px;" class="text-nowrap">
+                        <button class="btn btn-primary btn-sm">Xem</button>
+                        <button class="btn btn-warning btn-sm">Sửa</button>
+                        <button class="btn btn-danger btn-sm">Xoá</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    
+</body>
+</html>

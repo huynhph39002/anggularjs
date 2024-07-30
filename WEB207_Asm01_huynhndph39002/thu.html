@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout trang admin</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+
+</head>
+
+<body>
+    <!-- khu vực header -->
+    <nav class="navbar navbar-expand-sm shadow">
+        <div class="container">
+            <a href="trangchu.html" class="me-5"><img src="img/logo_bootstrap.webp" alt="" width="70px"></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="3">danh mục 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">danh mục 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">danh mục 3</a>
+                    </li> -->
+                </ul>
+                <form class="d-flex">
+                    <a href="Dangky.html"> <button class="btn btn-light me-3" type="button"> Đăng ký</button></a>
+                    <a href="DangNhap.html"><button class="btn btn-primary rounded-pill" type="button">Đăng
+                            nhập</button></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 2. Thiếu kế phần còn lại (menu và nội dung chính) -->
+    <!-- B1: Khai báo vài thẻ div cần thiết -->
+    <!-- B2: Chia width cho từng khu vực -->
+    <!-- Khu vực menu: width 250px -->
+    <!-- Khu vực ND chính: width là toàn bộ width còn lại -->
+    <!-- B3: Thêm class .d-flex và thẻ cha để 2 div con lên cùng 1 hàng -->
+
+    <!-- B4: Copy nav vừa thiết kế vào thay thế cho text // Khu vực menu -->
+    <!-- B5: Sửa lại style cho menu 1 chút để đẹp -->
+    <!-- 5.1: Sửa bg thành bg-light cho nhẹ nhàng. xoá bg nội dung chính -->
+    <!-- 5.2: Thêm 1 chút padding cho nav -->
+    <!-- 5.3: config chiều cao cho menu | min-height: calc(100vh - 56px); -->
+
+    <div class="d-flex">
+        <!-- Khu vực menu -->
+        <div class="bg-light p-2" style="width: 250px; min-height: calc(100vh - 56px);">
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Danh sách sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Tạo mới sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Danh sách danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tạo mới danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Danh sách đơn hàng</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Khu vực nội dung chính -->
+        <div class="mt-3" style="width: calc(100% - 250px);">
+            <div class="container">
+                
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Sidebar -->
+                        <div class="col-md-3">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">Danh Mục 1</a>
+                                <a href="#" class="list-group-item list-group-item-action">Danh Mục 2</a>
+                                <a href="#" class="list-group-item list-group-item-action">Danh Mục 3</a>
+                                <!-- Thêm danh mục nếu cần -->
+                            </div>
+                        </div>
+                
+                        <!-- Content -->
+                        <div class="col-md-9">
+                            <div class="row">
+                                <!-- Hiển thị sản phẩm tương ứng với danh mục được chọn -->
+                                <!-- Ví dụ: -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <img src="img/san-pham_ao-len-01.jpeg" class="card-img-top" alt="Product Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sản Phẩm 1</h5>
+                                            <p class="card-text">Mô tả sản phẩm 1.</p>
+                                            <a href="ChitietSP.html" class="btn btn-primary">Xem Chi Tiết</a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Thêm thẻ col-md-4 cho mỗi sản phẩm -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

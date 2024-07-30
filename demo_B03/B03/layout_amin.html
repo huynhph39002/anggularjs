@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <!-- <script src="lib/font-fontawesome-ae333ffef2.js"></script> -->
+
+    <!-- Nhúng AngularJS -->
+    <!-- <script src="lib/angular.js"></script> -->
+    <!-- <script src="lib/angular-route.js"></script> -->
+</head>
+
+<body>
+    <!-- 1. khai báo header -->
+    <nav class="navbar navbar-expand-sm bg-light shadow">
+        <!-- shadow : là dùng để đổ bóng -->
+        <div class="container-fluid">
+            <a href="" class="">
+                <img src="img/logo_bootstrap.webp" alt="" style="max-height: 40px; ">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link disabled text-dark" href="#">xin chao</a>
+                    <!-- disabled : không cho nhấn  -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-" href="#">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2. thiết kế phần còn lại( menu và nội dung chính) -->
+    <!-- B1: khai báo vài thẻ div cần thiết   -->
+    <!-- B2: chia width cho từng khu vực  -->
+    <!-- khu vực menu: width:250px -->
+    <!-- khu vực chính: width là toàn bộ width còn lại -->
+
+    <div class="d-flex">
+        <div class="bg-light p-2" style="width: 250px;min-height: calc(100vh-12px);">     
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Danh sách sản phẩm </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="taomoiSP.html">tạo mới sản phẩm </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">danh sách danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">tạo mới danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">danh sách đơn hàng</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mt-" style="width: calc(100% - 250px);">
+            <div class="container">
+                <h3>tiêu đề trang</h3>
+                 khu vực nội dung chính
+            </div>
+            </div>
+    </div>
+
+
+</body>
+
+</html>

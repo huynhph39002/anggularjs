@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/bootstrap.css"></script>
+    
+    <script>
+        var app=angular.module('myApp',[]);
+        
+        app.controller('controlerCtrl',function($scope,$http){
+          // 1.khai bao cac bien
+          $scope.danhSachSanPham=[];
+          $scope.danhMucSanPham=[];
+          // 2. call api lay danh sach san pham
+          $http({
+            methor:'GET',
+            url:'http://localhost:3000/san-pham'
+          }).then(function(response){
+            console.log("du lieu api tra ve:",response.data);
+            $scope.danhSachSanPham=response.data;
+          })
+
+          // 3. all api lay danh sach danh muc
+          $http({
+            method:'GET',
+            url:'http://localhost:3000/danh-muc'
+          }).then(function(response){
+            console.log("du lieu api tra ve:",response.data);
+            $scope.danhMucSanPham=response.data;
+          })
+
+          $scope.onClickDanhMuc=function(id){
+            console.log('danh muc duoc click:'+id);
+            //call api va truyen params
+            $http({
+              method:'GET',
+              url:'http://localhost:3000/san-pham',
+              params:{
+                idDanhMuc: id
+              }
+            }).then(function(response){
+              console.log("du lieu api tra ve:",response.data);
+              $scope.danhSachSanPham=response.data;
+            })
+          }
+
+        })
+
+
+    </script>
+</head>
+<body ng-app="myApp">
+    
+        <nav class="navbar navbar-expand-sm navbar-dark bg-light" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="javascript:void(0)"><img src="img/logo_bootstrap.webp" alt="" width="90px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class=" collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link"style="color: black;" href="javascript:void(0)">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"style="color: black;" href="javascript:void(0)">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"style="color: black;" href="javascript:void(0)">Link</a>
+                  </li>
+                </ul>
+                <form class="d-flex">           
+                  <button class="btn btn-light rounded-pill me-3" type="button">Đăng ký </button> 
+                  <button class="btn btn-primary rounded-pill "  type="button">Đăng nhập </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    
+    
+    <div class="container" ng-controller="controlerCtrl">
+       <h3>Danh sách sản phẩm </h3>
+       <!-- button loc -->
+      <span> loc theo danh muc:</span>
+      <button class="btn btn-light" ng-click="onClickDanhMuc(null)">all</button>
+      <button class="btn btn-light" 
+      ng-repeat="item in danhMucSanPham"
+      ng-click="onClickDanhMuc(item.id)">{{item.ten}}</button>
+
+       <!-- khu vuc button chinh  -->
+       <div class="d-flex justify-content-end">
+        <button class="btn btn-secondary">Tao moi san pham</button>
+       </div>
+       <!-- khu vuc table -->
+       <table class="table table-bordered mt-2">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>anh</th>
+                <th>ten</th>
+                <th>danh muc</th>
+                <th>tuong tac</th>
+            </tr>
+        </thead> 
+
+        <tbody>
+          <tr ng-repeat="item in danhSachSanPham">
+            <td>{{item.id}}</td>
+            <td><div class="border rounded bg-light overflow-hidden d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
+              <img src="{{item.anh}}" alt="" class="mw-100 mh-100">
+            </div></td>
+            <td>{{item.ten}}</td>
+            <td>{{item.tenDanhMuc}}</td>
+            <td></td>
+          </tr>
+
+        </tbody>
+       </table>
+
+    </div>
+    
+   
+    
+</body>
+</html>

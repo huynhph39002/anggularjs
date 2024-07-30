@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-end">
+    <a href="#!create" class="btn btn-success">tao moi</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>ten</th>
+            <th>hang</th>
+            <th>gia</th>
+            <th>chuc nang</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="item in DS">
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.hang}}</td>
+            <td>{{item.gia}}</td>
+            <td>
+                <a href="#!detail/{{item.id}}" class="btn btn-primary">chi tiet</a>
+                <a href="#!edit/{{item.id}}" class="btn btn-warning"> sua</a>
+                <button ng-click="xoa(item.id)" class="btn btn-danger">xoa</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/bootstrap.css">
+  <script src="lib/angular.js"></script>
+  <script src="lib/bootstrap.js"></script>
+  <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+  <style>
+    .navbar-brand {
+      margin-right: -76px;
+    }
+  </style>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('hiCtrl', function ($scope, $http) {
+      $scope.danhSachSanPham = [],
+        $scope.danhMuc = []
+      //san pham
+      $http({
+        method: 'GET',
+        url: 'http://localhost:3000/sanpham'
+      }).then(function (response) {
+        console.log("  ", response.data);
+        $scope.danhSachSanPham = response.data;
+      })
+
+      //danh muc
+      $http({
+        method: 'GET',
+        url: 'http://localhost:3000/danhmuc'
+      }).then(function (response) {
+        console.log("  ", response.data);
+        $scope.danhMuc = response.data;
+      })
+
+      $scope.onClickDanhMuc = function (id) {
+        console.log('a' + id);
+        $http({
+          method: 'GET',
+          url: 'http://localhost:3000/sanpham',
+          params: {
+            idDanhMuc: id
+          }
+        }).then(function (response) {
+          console.log("  ", response.data);
+          $scope.danhSachSanPham = response.data;
+        })
+      }
+
+
+    })
+
+
+  </script>
+
+<body ng-app="myApp">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-light">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+      <!-- Logo div -->
+      <a class="navbar-brand" href="javascript:void(0)">
+        <img src="img/logo/logo-black.webp" width="170px" alt="">
+      </a>
+
+      <!-- Icons -->
+
+    </div>
+    <div class="d-flex me-2">
+      <i class="fa-solid fa-user fa-xl me-2"></i>
+      <i class="fa-solid fa-heart fa-xl me-2"></i>
+      <i class="fa-solid fa-cart-shopping fa-xl"></i>
+    </div>
+  </nav>
+
+
+  <!-- <button class="btn btn-dark" ng-repeat="item in danhMuc" ng-click="onClickDanhMuc(item.id)">
+{{item.ten}}
+    </button> -->
+
+
+
+  <div class="container mt-3" ng-controller="hiCtrl" >
+    <div class="text-center justify-content-center align-items-center"> <button class="btn btn-light "
+        ng-repeat="item in danhMuc" ng-click="onClickDanhMuc(item.id)">{{item.ten}} <span
+          ng-if="!$last">/</span></button>
+
+    </div>
+
+    <div class="text-center mt-3">
+      <h2>TRANG CHỦ</h2>
+    </div>
+
+
+    <div class="row">
+      <div class="col-3 mt-3" ng-repeat="item in danhSachSanPham">
+        <div class="border rounded overflow-hidden justify-content-center align-items-center">
+          <img src="{{item.anh}}" width="309px" alt="" class="mx-100 mh-100">
+          <div><img src="img/black-friday.webp" class="w-100" alt=""></div>
+        </div>
+        <div>
+          <span>{{item.ten}}</span>
+          <br>
+          <div style=" display: flex; justify-content: space-between;"></div>
+
+          <b style="text-decoration: line-through; opacity: 0.5;">{{item.giaNiemYet}}</b>
+
+          <b>{{item.giaBan}}</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer class="bg-dark mt-5">
+    <div>
+      <img src="img/logo/logo-white.webp" width="150px" alt="">
+    </div>
+    <div>
+      <SPan style="color: azure;"> CÔNG TY THAAFHAS VIET NAM</SPan>
+    </div>
+  </footer>
+
+</body>
+
+</html>

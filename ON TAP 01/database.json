@@ -1,0 +1,18 @@
+{
+  "phone": [
+    {
+      "id": "01",
+      "name": "",
+      "hang": "IPHONE",
+      "gia": "12345612345",
+      "ten": "ip"
+    },
+    {
+      "id": "02",
+      "name": "",
+      "hang": "SAM SUNG",
+      "gia": "111111111111",
+      "ten": "samsung"
+    }
+  ]
+}

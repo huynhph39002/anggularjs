@@ -1,0 +1,65 @@
+<div class= "container col-sm-6">
+    <form class="mt-5">
+        <h3 class="">Đăng Nhập</h3>
+        <div class="mb-3 mt-3">
+            <label for="username" class="form-label">Tên đăng nhập hoặc Email:</label>
+            <input type="text" class="form-control" id="username" name="username"  ng-model="users.Ten" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Mật khẩu:</label>
+            <input type="password" class="form-control" id="password" name="password" ng-model="users.Matkhau" required>
+        </div>
+        <div class="mb-3 form-check d-flex align-items-center">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label me-2" for="rememberMe">Ghi nhớ đăng nhập</label>
+            <a href="" class="text-decoration-non me-3">Quên mật khẩu?</a>
+           <a class="" href="#!dangky-product"><button class="btn btn-light  " type="button"> Đăng ký</button></a> 
+        </div>
+    
+        <button type="submit" class="btn btn-dark" ng-click="onClickDangnhap()">Đăng Nhập</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Đăng Nhập</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="emailOrUsername" class="form-label">Email/Username</label>
+                    <input type="text" class="form-control" id="emailOrUsername" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                <a href="index.html"><button type="button" class="btn btn-secondary" onclick="goBack()">Quay Lại</button></a>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<!-- login.html -->
+<!-- <div ng-controller="loginProductCtrl">
+    <h2>Đăng Nhập Sản Phẩm</h2>
+    <form ng-submit="loginProduct()">
+        <label for="username">Tên người dùng:</label>
+        <input type="text" id="username" ng-model="productCredentials.username" required>
+        
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" ng-model="productCredentials.password" required>
+        
+        <button type="submit">Đăng Nhập</button>
+    </form>
+</div> -->

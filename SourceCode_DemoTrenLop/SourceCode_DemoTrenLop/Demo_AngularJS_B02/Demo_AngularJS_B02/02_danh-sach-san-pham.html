@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB207_TaiNguyen_thuvien</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+
+    <!-- 1. Nhúng thư viện angularjs -->
+    <!-- 2. Khởi tạo ng-app 'myApp' -->
+    <!-- 3. Khởi tạo controller 'danhSachSanPhamCtrl' -->
+
+    <script src="lib/angular.js"></script>
+
+    <script>
+        // Khai báo ng-app
+        var app = angular.module('myApp', []);
+
+        // Khai báo controller
+        app.controller('danhSachSanPhamCtrl', function ($scope, $http) {
+            console.log('danhSachSanPhamCtrl xin chào');
+
+            // 1. Khai báo các biến cần thiết
+            $scope.danhSachSanPham = [];
+            $scope.danhSachDanhMuc = [];
+
+            // 2. Call api lấy danh sách sản phẩm
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/san-pham'
+            }).then(function (response) {
+                // Code logic xử lý khi call api thành công
+                console.log("Log thử dữ liệu API:", response.data);
+
+                // Gán dữ liệu vào biến
+                $scope.danhSachSanPham = response.data;
+            })
+
+            // 3. Call api lấy danh sách danh mục
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/danh-muc'
+            }).then(function (response) {
+                // Code logic xử lý khi call api thành công
+                console.log("Log thử dữ liệu API:", response.data);
+
+                // Gán dữ liệu vào biến
+                $scope.danhSachDanhMuc = response.data;
+            })
+
+            // 4. Thiết kế html và dùng ng-repeat để hiển thị danh sách button danh mục
+
+            // 5. Bắt sự kiện click vào button danh mục.
+            // Và call api để hiển thị danh sách sản phẩm mới
+            $scope.onClickDanhMuc = function (id) {
+                console.log('Danh mục bị click: ', id);
+
+                // Call api lấy danh sách sản phẩm mới
+                $http({
+                    method: 'GET',
+                    url: 'http://localhost:3000/san-pham',
+                    params: {
+                        idDanhMuc: id
+                    }
+                }).then(function (response) {
+                    // Code logic xử lý khi call api thành công
+                    console.log("Log thử dữ liệu API:", response.data);
+
+                    // Gán dữ liệu vào biến
+                    $scope.danhSachSanPham = response.data;
+                })
+
+            }
+
+
+
+        })
+
+
+    </script>
+
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="danhSachSanPhamCtrl">
+        <!-- Khu vực tiêu đề trang -->
+        <h3>Danh sách sản phẩm</h3>
+
+        <!-- Khu vực bộ lọc -->
+        <span>Lọc theo danh mục:</span>
+
+        <button class="btn btn-light" ng-click="onClickDanhMuc(null)">Tất cả</button>
+
+        <button class="btn btn-light" ng-repeat="item in danhSachDanhMuc"
+            ng-click="onClickDanhMuc(item.id)">{{item.ten}}</button>
+
+        <!-- Khu vực button chính -->
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-success">Tạo mới sản phẩm</button>
+        </div>
+
+        <!-- Khu vực bảng -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ảnh</th>
+                    <th>Tên</th>
+                    <th>Danh mục</th>
+
+                    <th>Tương tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in danhSachSanPham">
+                    <td> {{item.id}} </td>
+                    <td>
+                        <div class="border rounded bg-light overflow-hidden d-flex align-items-center justify-content-center"
+                            style="height: 100px; width: 100px;">
+                            <img ng-src="{{item.anh}}" class="mh-100 mw-100">
+                        </div>
+
+                    </td>
+                    <td> {{item.ten}} </td>
+                    <td> {{item.tenDanhMuc}}</td>
+
+                    <td style="width: 1px;" class="text-nowrap">
+                        <button class="btn btn-primary btn-sm">Xem</button>
+                        <button class="btn btn-warning btn-sm">Sửa</button>
+                        <button class="btn btn-danger btn-sm">Xoá</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- Khu vực phân trang -->
+        <!-- <div class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div> -->
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!-- Tiêu đề trang -->
+<h3 class="text-center">Chi tiết dien thoai</h3>
+
+<form >
+    <div class="mt-3">
+        <span class="form-label">ID</span>
+        <input class="form-control" type="text" ng-model="phone.id" disabled>
+    </div>
+    <div class="mt-3">
+        <span class="form-label">ten</span>
+        <input class="form-control" type="text" ng-model="phone.ten" disabled>
+    </div>
+    <div class="mt-3">
+        <span class="form-label">Hang</span>
+        <select  class="form-control" ng-model="phone.hang" >
+            <option value=""disabled>--Lua chon--</option disabled>
+            <option value="SAMSUNG">SAMSUNG</option>
+            <option value="APPLE">APPLE</option>
+            <option value="OPPO">OPPO</option>
+        </select>
+    </div>
+    <div class="mt-3">
+        <span class="form-label">Gia</span>
+        <input class="form-control" type="text" ng-model="phone.gia" disabled>
+    </div>
+
+    <div class="mt-3 text-center" >
+        <a href="#!list-phone" class="btn btn-secondary">Quay lai</a>
+        <!-- <a href="#!edit/phone" class="btn btn-warning">sua</a> -->
+        <button ng-click="onClickXoa()" class="btn btn-danger">xoa</button>
+    </div>
+</form>
